@@ -1,4 +1,4 @@
-University_Unity_Game
+University Unity Game
 =====================
 
 ## Concept
