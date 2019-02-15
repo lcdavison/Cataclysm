@@ -15,4 +15,12 @@ The rules for the game are as follows:
 
 ## Visual Assets
 
+* The players weapon/s
+* Enemies
+* Environmental Objects
+
 ## User Interface
+
+* Health Bar
+* Ammo
+* Collected Keys
