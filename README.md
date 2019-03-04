@@ -1,5 +1,5 @@
 University Unity Game
-=====================
+=
 
 ## Concept
 
