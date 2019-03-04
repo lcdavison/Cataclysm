@@ -1,11 +1,14 @@
 University Unity Game
-=
+==
 
 ## Concept
 
 Classic First-Person Shooter inspired by games such as Doom and Quake.
 
 ## Goal
+
+The goal of this project, is to learn how to use the Unity Game Engine to create a simple game prototype.  
+Which employs a variety of game mechanics, and graphical effects.
 
 ## Rules
 
