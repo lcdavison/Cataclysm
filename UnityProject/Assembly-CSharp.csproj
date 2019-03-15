@@ -55,18 +55,22 @@
   <ItemGroup>
      <Compile Include="Assets\Source\MainMenu\MainMenuUIHandler.cs" />
      <Compile Include="Assets\Source\Player\CameraController.cs" />
+     <Compile Include="Assets\Source\Player\Player.cs" />
      <Compile Include="Assets\Source\Player\PlayerController.cs" />
+     <Compile Include="Assets\Source\ResourceManager\ResourceManager.cs" />
+     <Compile Include="Assets\Source\Singleton.cs" />
+     <Compile Include="Assets\Source\Weapons\Weapon.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>E:/University/Year 2/Game Development/Unity Game/UnityProject/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
  <HintPath>E:/University/Year 2/Game Development/Unity Game/UnityProject/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
- <Reference Include="Unity.TextMeshPro">
- <HintPath>E:/University/Year 2/Game Development/Unity Game/UnityProject/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
- </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
  <HintPath>E:/University/Year 2/Game Development/Unity Game/UnityProject/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.TextMeshPro">
+ <HintPath>E:/University/Year 2/Game Development/Unity Game/UnityProject/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.DataPrivacy">
  <HintPath>E:/University/Year 2/Game Development/Unity Game/UnityProject/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
