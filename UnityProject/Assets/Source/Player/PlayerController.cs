@@ -5,6 +5,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]
+    private Player player;
+
+    [SerializeField]
     private Rigidbody rigidbody;
 
     [SerializeField]
@@ -13,6 +16,9 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        ResourceManager rm = Singleton.GetResourceManager ( );
+
+        player.EquipWeapon ( rm.LoadAsset < Weapon > ( "WeaponData/Pistol" ) );
     }
 
     // Update is called once per frame
