@@ -21,12 +21,21 @@ public class PlayerController : MonoBehaviour
         player.EquipWeapon ( rm.LoadAsset < Weapon > ( "WeaponData/Pistol" ) );
     }
 
+    void Update ( )
+    {
+        player.FireWeapon ( );
+    }
+
     // Update is called once per frame
-    void FixedUpdate()
+    void FixedUpdate ( )
     {
         Vector3 move_direction = new Vector3 ( Input.GetAxis ( "Horizontal" ), 0.0f, Input.GetAxis ( "Vertical" ) );
 
-        move_direction *= movement_speed;
+        //  Sprint if the shift key is held down
+        if ( Input.GetKey ( KeyCode.LeftShift ) )
+            move_direction *= ( movement_speed * 2 );
+        else
+            move_direction *= movement_speed;
 
         move_direction = transform.TransformDirection ( move_direction );
 
