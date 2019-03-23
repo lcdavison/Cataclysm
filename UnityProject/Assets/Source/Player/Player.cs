@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
         {
             if ( Input.GetKey ( KeyCode.Mouse0 ) )
             {
-                if ( Time.time - last_time > ( 1 / 10 ) )
+                if ( Time.time - last_time > ( 1 / equipped_weapon.fire_rate ) )
                 {
                     Debug.Log ( "Auto Fire" );
                     last_time = Time.time;

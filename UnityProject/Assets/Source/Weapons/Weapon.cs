@@ -8,4 +8,5 @@ public class Weapon : ScriptableObject
     public Mesh weapon_mesh = null;
     public int damage = 0;
     public bool automatic = false;
+    public int fire_rate = 1;
 }
