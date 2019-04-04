@@ -59,7 +59,9 @@
      <Compile Include="Assets\Source\Player\PlayerController.cs" />
      <Compile Include="Assets\Source\ResourceManager\ResourceManager.cs" />
      <Compile Include="Assets\Source\Singleton.cs" />
+     <Compile Include="Assets\Source\Weapons\Projectile.cs" />
      <Compile Include="Assets\Source\Weapons\Weapon.cs" />
+     <Compile Include="Assets\Source\WorldObjects\Door.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>E:/University/Year 2/Game Development/Unity Game/UnityProject/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
@@ -276,14 +278,14 @@
  <Reference Include="UnityEngine.SpatialTracking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
- <Reference Include="Unity.Analytics.Tracker">
- <HintPath>E:/University/Year 2/Game Development/Unity Game/UnityProject/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+ <Reference Include="Unity.Analytics.Editor">
+ <HintPath>E:/University/Year 2/Game Development/Unity Game/UnityProject/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
  <HintPath>E:/University/Year 2/Game Development/Unity Game/UnityProject/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
  </Reference>
- <Reference Include="Unity.Analytics.Editor">
- <HintPath>E:/University/Year 2/Game Development/Unity Game/UnityProject/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+ <Reference Include="Unity.Analytics.Tracker">
+ <HintPath>E:/University/Year 2/Game Development/Unity Game/UnityProject/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>

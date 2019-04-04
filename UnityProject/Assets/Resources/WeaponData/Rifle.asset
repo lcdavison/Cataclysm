@@ -16,3 +16,4 @@ MonoBehaviour:
   weapon_mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
   damage: 6
   automatic: 1
+  fire_rate: 300
