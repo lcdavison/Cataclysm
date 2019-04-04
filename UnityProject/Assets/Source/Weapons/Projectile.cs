@@ -30,6 +30,6 @@ public class Projectile : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate ( )
     {
-        rigidbody.AddForce ( transform.forward * projectile_speed, ForceMode.Impulse );
+        rigidbody.MovePosition ( transform.position + ( transform.forward * projectile_speed * Time.deltaTime) );
     }
 }
