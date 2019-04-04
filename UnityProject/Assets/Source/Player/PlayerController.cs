@@ -16,9 +16,10 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         ResourceManager rm = Singleton.GetResourceManager ( );
 
-        player.EquipWeapon ( rm.LoadAsset < Weapon > ( "WeaponData/Pistol" ) );
+        player.EquipWeapon ( rm.LoadAsset < Weapon > ( "WeaponData/Rifle" ) );
     }
 
     void Update ( )
