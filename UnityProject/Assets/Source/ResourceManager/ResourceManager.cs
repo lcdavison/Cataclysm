@@ -11,7 +11,7 @@ public class ResourceManager
         weapons = Array.ConvertAll ( Resources.LoadAll ( "WeaponData" ), item => ( Weapon ) item );
     }
 
-    public T LoadAsset<T> ( string path ) 
+    public T LoadAsset<T> ( string path )
     {
         return ( T ) Convert.ChangeType ( Resources.Load ( path ), typeof ( T ) );
     }
@@ -20,7 +20,7 @@ public class ResourceManager
     {
         foreach ( Weapon weapon in weapons )
         {
-            if ( weapon.weapon_id == id )
+            if ( weapon.id == id )
                 return weapon;
         }
 
