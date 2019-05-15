@@ -4,14 +4,8 @@ using UnityEngine;
 
 public class KeyCard : MonoBehaviour
 {
-    public enum KEYCOLOR
-    {
-            RED = 0x1,
-            BLUE = 0x2
-    };
-
     [SerializeField]
-    private KEYCOLOR color;
+    private Key.COLOR color;
 
     void OnTriggerEnter ( Collider other )
     {
@@ -22,7 +16,7 @@ public class KeyCard : MonoBehaviour
         }
     }
 
-    public KEYCOLOR GetColor ( )
+    public Key.COLOR GetColor ( )
     {
         return color;
     }

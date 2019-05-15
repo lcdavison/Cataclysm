@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static List < KeyCard > keycards = new List < KeyCard > ( );
+    private static byte keymask = 0;
 
     public static void AddKeyCard ( KeyCard keycard )
     {
-        keycards.Add ( keycard );
+        keymask |= (byte) keycard.GetColor ( );
+    }
+
+    public static byte GetKeyMask ( )
+    {
+        return keymask;
     }
 }
