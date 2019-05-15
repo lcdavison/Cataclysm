@@ -11,6 +11,12 @@ public class Door : MonoBehaviour
     private Transform destination_marker;
     private Transform door;
 
+    [SerializeField]
+    private Key.COLOR required_key;
+
+    [SerializeField]
+    private bool locked = false;
+
     private Vector3 original_position;
     private Vector3 destination;
 
@@ -22,8 +28,13 @@ public class Door : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void Update ( )
     {
+        if ( ( GameManager.GetKeyMask ( ) & (byte) ( required_key ) ) > 0 )
+        {
+            locked = false;
+        }
+
         if ( destination != door.position )
         {
             door.position = Vector3.Lerp ( door.position, destination, door_speed * Time.deltaTime );
@@ -32,7 +43,7 @@ public class Door : MonoBehaviour
 
     void OnTriggerEnter ( Collider collider )
     {
-        if ( collider.gameObject.tag == "Player" )
+        if ( collider.gameObject.tag == "Player" && !locked )
         {
             destination = destination_marker.position;
         }
