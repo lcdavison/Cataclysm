@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -20,7 +21,11 @@ public class Player : MonoBehaviour
     [SerializeField]
     private Weapon equipped_weapon;
 
-    private BulletPool bullet_pool;
+    [SerializeField]
+    private ParticleSystem explosion;
+
+    [SerializeField]
+    private AudioSource gun_sound;
 
     private float max_health = 100.0f;
     private float health;
@@ -31,18 +36,26 @@ public class Player : MonoBehaviour
 
     void Awake ( )
     {
-        bullet_pool = new BulletPool ( projectile, 30 );
         health = max_health;
     }
 
     void Update ( )
     {
+        if ( health <= 0.0f )
+        {
+            //  Load Death Scene
+            SceneManager.LoadScene ( "Death" );
+        }
+    }
+
+    void FixedUpdate ( )
+    {
         RaycastHit hit;
-        if ( Physics.Raycast ( transform.position, transform.forward, out hit, Mathf.Infinity, 1 ) )
+        if ( Physics.Raycast ( weapon_offset.transform.position, transform.forward, out hit, Mathf.Infinity, 1 ) )
         {
             if ( hit.collider.gameObject.tag == "Enemy" )
             {
-                Debug.DrawRay ( transform.position, transform.forward * hit.distance, Color.blue );
+                Debug.DrawRay ( weapon_offset.transform.position, transform.forward * hit.distance, Color.blue );
                 closest_enemy = hit.collider.gameObject.GetComponent < Enemy > ( );
             }
             else
@@ -52,6 +65,11 @@ public class Player : MonoBehaviour
         }
 
         health_bar.value = health / max_health;
+    }
+
+    public void DeductHealth ( float amount )
+    {
+        health -= amount;
     }
 
     public void EquipWeapon ( Weapon weapon )
@@ -74,6 +92,10 @@ public class Player : MonoBehaviour
                 SpawnBullet ( );
             }
         }
+        else
+        {
+            explosion.Stop ( );
+        }
     }
 
     public Enemy GetClosestEnemy ( )
@@ -83,15 +105,20 @@ public class Player : MonoBehaviour
 
     private void SpawnBullet ( )
     {
-        GameObject bullet = bullet_pool.GetBullet ( );
+        if ( explosion.isStopped )
+            explosion.Play ( );
 
-        bullet.transform.position = weapon_offset.transform.position;
-        bullet.transform.rotation = weapon_offset.transform.rotation;
+        gun_sound.Play ( );
 
-        Projectile p = bullet.GetComponent < Projectile > ( );
-        p.SetSpawnTime ( Time.time );
-        p.SetDamage ( equipped_weapon.damage );
-
-        bullet.SetActive ( true );
+        RaycastHit hit;
+        Debug.DrawRay ( transform.position, Camera.main.transform.forward * 60.0f, Color.red );
+        if ( Physics.Raycast ( transform.position, Camera.main.transform.forward, out hit, 60.0f ) )
+        {
+            if ( hit.collider.gameObject.tag == "Enemy" )
+            {
+                Enemy hit_enemy = hit.collider.gameObject.GetComponent < Enemy > ( );
+                hit_enemy.DeductHealth ( equipped_weapon.damage );
+            }
+        }
     }
 }
