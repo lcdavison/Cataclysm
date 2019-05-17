@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90c889f0fe1ec8644aaa40ce3b37d0d6, type: 3}
-  m_Name: Bandit
+  m_Name: BanditGrunt
   m_EditorClassIdentifier: 
-  name: Bandit
+  name: Bandit Grunt
   level: 1
-  health: 50
+  health: 100

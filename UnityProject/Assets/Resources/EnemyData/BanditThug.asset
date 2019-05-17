@@ -9,12 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66e1f93232dbaef42a90288cba7c6656, type: 3}
-  m_Name: Rifle
+  m_Script: {fileID: 11500000, guid: 90c889f0fe1ec8644aaa40ce3b37d0d6, type: 3}
+  m_Name: BanditThug
   m_EditorClassIdentifier: 
-  id: 1
-  mesh: {fileID: -2432090755550338912, guid: 3c269b38a66efd845af68ef2a553a611, type: 3}
-  offset: {x: 0, y: -0.3, z: 1.15}
-  damage: 3
-  automatic: 1
-  fire_rate: 20
+  name: Bandit Thug
+  level: 1
+  health: 50

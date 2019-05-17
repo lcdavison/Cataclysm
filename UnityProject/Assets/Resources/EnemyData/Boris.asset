@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Boris
   level: 2
-  health: 100
+  health: 200
