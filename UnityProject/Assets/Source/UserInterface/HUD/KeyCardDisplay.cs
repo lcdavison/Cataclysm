@@ -21,17 +21,18 @@ public class KeyCardDisplay : MonoBehaviour
     // Update is called once per frame
     void LateUpdate ( )
     {
-        foreach ( KeyCard key in GameManager.keycards )
+        switch ( GameManager.GetKeyMask ( ) )
         {
-            switch ( key.GetColor ( ) )
-            {
-                case KeyCard.KEYCOLOR.RED:
-                    ToggleAlpha ( red_keycard, 1.0f );
-                    break;
-                case KeyCard.KEYCOLOR.BLUE:
-                    ToggleAlpha ( blue_keycard, 1.0f );
-                    break;
-            }
+            case 0x1:
+                ToggleAlpha ( red_keycard, 1.0f );
+                break;
+            case 0x2:
+                ToggleAlpha ( blue_keycard, 1.0f );
+                break;
+            case 0x3:
+                ToggleAlpha ( red_keycard, 1.0f );
+                ToggleAlpha ( blue_keycard, 1.0f );
+                break;
         }
     }
 
