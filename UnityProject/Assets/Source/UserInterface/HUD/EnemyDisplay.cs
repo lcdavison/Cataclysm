@@ -21,7 +21,7 @@ public class EnemyDisplay : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void Update ( )
     {
         Enemy enemy = player.GetClosestEnemy ( );
 
@@ -32,7 +32,6 @@ public class EnemyDisplay : MonoBehaviour
             group.alpha = 1.0f;
             health_bar.value = enemy.GetHealth ( ) / data.health;
             enemy_info.text = data.name + " Level " + System.Convert.ToString ( data.level );
-            transform.position = Camera.main.WorldToScreenPoint ( enemy.marker.position );
         }
         else
         {
