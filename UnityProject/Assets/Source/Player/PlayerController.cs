@@ -8,13 +8,13 @@ public class PlayerController : MonoBehaviour
     private Player player;
 
     [SerializeField]
-    private Rigidbody rigidbody;
+    private CharacterController controller;
 
     [SerializeField]
     private float movement_speed = 2.0f;
 
     // Start is called before the first frame update
-    void Start()
+    void Start ( )
     {
         Cursor.lockState = CursorLockMode.Locked;
         ResourceManager rm = Singleton.GetResourceManager ( );
@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate ( )
     {
-        Vector3 move_direction = new Vector3 ( Input.GetAxis ( "Horizontal" ), 0.0f, Input.GetAxis ( "Vertical" ) );
+        Vector3 move_direction = new Vector3 ( Input.GetAxisRaw ( "Horizontal" ), 0.0f, Input.GetAxisRaw ( "Vertical" ) );
 
         //  Sprint if the shift key is held down
         if ( Input.GetKey ( KeyCode.LeftShift ) )
@@ -40,6 +40,8 @@ public class PlayerController : MonoBehaviour
 
         move_direction = transform.TransformDirection ( move_direction );
 
-        rigidbody.MovePosition ( transform.position + ( move_direction * Time.deltaTime ) );
+        move_direction.y = -2.0f;
+
+        controller.Move ( move_direction * Time.deltaTime );
     }
 }
