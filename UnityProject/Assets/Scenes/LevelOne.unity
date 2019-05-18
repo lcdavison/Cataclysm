@@ -14501,15 +14501,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 754473803, guid: fe63e36a369eead4d857f24932404dc6, type: 3}
+      propertyPath: health_bar
+      value: 
+      objectReference: {fileID: 1513901957}
     - target: {fileID: 3017387944481310082, guid: fe63e36a369eead4d857f24932404dc6,
         type: 3}
       propertyPath: m_Name
       value: Gun
       objectReference: {fileID: 0}
-    - target: {fileID: 754473803, guid: fe63e36a369eead4d857f24932404dc6, type: 3}
-      propertyPath: health_bar
-      value: 
-      objectReference: {fileID: 1513901957}
     - target: {fileID: 1469094266425297465, guid: fe63e36a369eead4d857f24932404dc6,
         type: 3}
       propertyPath: looping

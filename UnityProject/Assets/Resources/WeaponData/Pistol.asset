@@ -14,7 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   mesh: {fileID: -2432090755550338912, guid: 816a9ce1be0aac94d81c18110fa15988, type: 3}
-  offset: {x: 0, y: 0.5, z: 0}
-  damage: 4
-  automatic: 0
-  fire_rate: 1
+  damage: 10
+  fire_rate: 2

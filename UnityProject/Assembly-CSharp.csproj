@@ -55,6 +55,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Source\End.cs" />
      <Compile Include="Assets\Source\Enemy\Enemy.cs" />
      <Compile Include="Assets\Source\Enemy\EnemyAttack.cs" />
      <Compile Include="Assets\Source\Enemy\EnemyData.cs" />
@@ -69,6 +70,7 @@
      <Compile Include="Assets\Source\UserInterface\HUD\EnemyDisplay.cs" />
      <Compile Include="Assets\Source\UserInterface\HUD\KeyCardDisplay.cs" />
      <Compile Include="Assets\Source\UserInterface\MainMenu\MainMenuUIHandler.cs" />
+     <Compile Include="Assets\Source\UserInterface\TypeWriter.cs" />
      <Compile Include="Assets\Source\Weapons\Weapon.cs" />
      <Compile Include="Assets\Source\WorldObjects\Door.cs" />
      <Compile Include="Assets\Source\WorldObjects\KeyCard\KeyCard.cs" />

@@ -400,7 +400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon_obj: {fileID: 3017387944481310082}
-  weapon_offset: {fileID: 4597915792106905713}
+  weapon_offset: {fileID: 7297119901110221373}
   projectile: {fileID: 531424812466777850, guid: ee734454663e0654086917cbf134712e,
     type: 3}
   health_bar: {fileID: 0}
