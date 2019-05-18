@@ -1,9 +1,0 @@
-#	Unity
-*.bin
-*.info
-*.log
-*.meta
-*.json
-*.dll
-metadata/
-Library/
