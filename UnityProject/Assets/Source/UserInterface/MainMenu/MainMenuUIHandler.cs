@@ -5,14 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuUIHandler : MonoBehaviour
 {
+    //  Start the game
     public void PlayOnClick ( )
     {
         SceneManager.LoadScene ( "LevelOne" );
     }
 
+    //  Close the game
     public void ExitOnClick ( )
     {
         Application.Quit ( );
-        Debug.Log ( "Quit Clicked" );
     }
 }

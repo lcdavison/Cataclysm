@@ -4,18 +4,21 @@ using UnityEngine;
 
 public class ResourceManager
 {
-    public Weapon [] weapons;
+    private Weapon [] weapons;
 
+    //  Cache all the weapon data
     public void CacheWeapons ( )
     {
         weapons = Array.ConvertAll ( Resources.LoadAll ( "WeaponData" ), item => ( Weapon ) item );
     }
 
-    public T LoadAsset<T> ( string path )
+    //  Load asset from file
+    public T LoadAsset < T > ( string path )
     {
         return ( T ) Convert.ChangeType ( Resources.Load ( path ), typeof ( T ) );
     }
 
+    //  Get weapon from array
     public Weapon GetWeapon ( int id )
     {
         foreach ( Weapon weapon in weapons )
